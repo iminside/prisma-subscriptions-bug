@@ -1,0 +1,10 @@
+endpoint: https://us1.prisma.sh/denis-churbanov-e0caa8/prisma/dev
+datamodel: datamodel.prisma
+
+generate:
+    - generator: typescript-client
+      output: ../generated/prisma
+
+hooks:
+    post-deploy:
+        - prisma generate
